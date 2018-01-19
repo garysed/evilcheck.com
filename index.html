@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<title>evil checker</title>
+<body style="text-align:center">
+	<p style="font-size:28">check if your number is evil</p>
+	<input id="input" type="number" onfocus="clr()" value="0"/></br></br>
+	<button type="button" onclick="check()">check</button>
+	<p id="result"></p>
+	
+	<script>
+
+	function clr(){
+		document.getElementById("result").innerHTML = "";
+	}
+	
+	function check(){
+		var val = document.getElementById("input").value
+		if(val==666 || val==666666 || val==13){
+			document.getElementById("result").innerHTML = "YOUR NUMBER IS EVIL.";
+			document.getElementById("result").style.color = "red";
+		}else{
+			document.getElementById("result").innerHTML = "your number is not evil.";
+			document.getElementById("result").style.color = "green";
+		}
+	}
+	
+	</script>
+</body>
+</html>
